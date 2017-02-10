@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTF_Site", "WTF_Site\WTF_Site.csproj", "{2778394A-EB5E-4E04-AF8C-8E02BC6171BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTF_Site.Tests", "WTF_Site.Tests\WTF_Site.Tests.csproj", "{DFB407EC-7FB8-4CD0-8230-3E5FF3C37CAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2778394A-EB5E-4E04-AF8C-8E02BC6171BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2778394A-EB5E-4E04-AF8C-8E02BC6171BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2778394A-EB5E-4E04-AF8C-8E02BC6171BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2778394A-EB5E-4E04-AF8C-8E02BC6171BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB407EC-7FB8-4CD0-8230-3E5FF3C37CAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB407EC-7FB8-4CD0-8230-3E5FF3C37CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB407EC-7FB8-4CD0-8230-3E5FF3C37CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB407EC-7FB8-4CD0-8230-3E5FF3C37CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
