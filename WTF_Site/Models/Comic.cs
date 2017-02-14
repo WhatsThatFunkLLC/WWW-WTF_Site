@@ -12,6 +12,6 @@ namespace WTF_Site.Models
         public string Title { get; set; }
         public string Summary { get; set; }
         public double Price { get; set; }
-        public Image Preview { get; set; }
+        //public Image Preview { get; set; }
     }
 }

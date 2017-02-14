@@ -9,6 +9,6 @@ namespace WTF_Site.ViewModels
     public class ComicViewModel
     {
         public Comic Comic;
-        public User User;
+        public Customer Customer;
     }
 }
