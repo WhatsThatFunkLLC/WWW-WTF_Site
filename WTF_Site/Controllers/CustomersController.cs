@@ -9,7 +9,7 @@ namespace WTF_Site.Controllers
 {
     public class CustomersController : Controller
     {
-        private appplicationdb
+        private ApplicationDbContext _Context;
 
         // GET: Customers
         public ActionResult Index()
@@ -19,7 +19,7 @@ namespace WTF_Site.Controllers
 
         private IEnumerable<Customer> GetCustomers()
         {
-            
+            return new List<Customer>();
         }
     }
 }
