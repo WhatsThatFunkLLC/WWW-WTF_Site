@@ -11,10 +11,12 @@ namespace WTF_Site.Controllers
 {
     public class ComicsController : Controller
     {
+        private ApplicationDbContext _context;
         private IComicService _comicService;
 
         public ComicsController()
         {
+            _context = new ApplicationDbContext();
             _comicService = new ComicService();
         }
 
@@ -35,13 +37,8 @@ namespace WTF_Site.Controllers
                 return HttpNotFound();
             }
 
-            var comic = new Comic();
-            comic.Id = (int)id;
-            comic.Price = 3;
-            comic.Title = "Test comic";
-            comic.Summary = "Test summary";
-
-
+            var comic = _comicService.InitializeComics().Where(x => x.Id == id).FirstOrDefault();
+           
             return View(comic);
            
         }
@@ -55,6 +52,11 @@ namespace WTF_Site.Controllers
         public ActionResult Edit(int id)
         {
             return Content("id=" + id);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
     }
 }

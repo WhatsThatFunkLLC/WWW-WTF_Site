@@ -13,7 +13,7 @@ namespace WTF_Site.Services
             throw new NotImplementedException();
         }
 
-        public List<Comic> InitializeComics()
+        public IEnumerable<Comic> InitializeComics()
         {
             List<Comic> comics = new List<Comic>();
 

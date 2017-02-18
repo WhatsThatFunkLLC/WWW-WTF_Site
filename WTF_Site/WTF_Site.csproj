@@ -230,6 +230,10 @@
     <Compile Include="Migrations\201702180314560_UpdatingDbAfterSourceUpdate.Designer.cs">
       <DependentUpon>201702180314560_UpdatingDbAfterSourceUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702182209099_PopulateComics.cs" />
+    <Compile Include="Migrations\201702182209099_PopulateComics.Designer.cs">
+      <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
@@ -343,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702180314560_UpdatingDbAfterSourceUpdate.resx">
       <DependentUpon>201702180314560_UpdatingDbAfterSourceUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702182209099_PopulateComics.resx">
+      <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
