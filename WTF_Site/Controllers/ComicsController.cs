@@ -27,6 +27,25 @@ namespace WTF_Site.Controllers
             return View(comicsViewModel);
         }
 
+        
+        public ActionResult Details(int? id)
+        {
+            if(id == null || id < 1)
+            {
+                return HttpNotFound();
+            }
+
+            var comic = new Comic();
+            comic.Id = (int)id;
+            comic.Price = 3;
+            comic.Title = "Test comic";
+            comic.Summary = "Test summary";
+
+
+            return View(comic);
+           
+        }
+
         public ActionResult Random()
         {
             var comic = new Comic() { Title = "Xybermporphs Volume 1" };
