@@ -6,9 +6,8 @@ using WTF_Site.Models;
 
 namespace WTF_Site.ViewModels
 {
-    public class ComicViewModel
+    public class ComicsViewModel
     {
-        public Comic Comic;
-        public Customer Customer;
+        public List<Comic> Comics;
     }
 }

@@ -4,25 +4,27 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WTF_Site.Models;
+using WTF_Site.Services;
+using WTF_Site.ViewModels;
 
 namespace WTF_Site.Controllers
 {
     public class ComicsController : Controller
     {
+        private IComicService _comicService;
+
+        public ComicsController()
+        {
+            _comicService = new ComicService();
+        }
+
         // GET: Comics
         public ActionResult Index(int? pageIndex, string sortBy)
         {
-            if(!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
+            var comicsViewModel = new ComicsViewModel();
+            comicsViewModel.Comics = _comicService.InitializeComics();
 
-            if(string.IsNullOrWhiteSpace(sortBy))
-            {
-                sortBy = "Name";
-            }
-
-            return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
+            return View(comicsViewModel);
         }
 
         public ActionResult Random()

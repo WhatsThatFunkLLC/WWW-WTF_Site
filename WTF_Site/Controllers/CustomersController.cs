@@ -9,12 +9,25 @@ namespace WTF_Site.Controllers
 {
     public class CustomersController : Controller
     {
-        private ApplicationDbContext _Context;
+        private ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        //The proper way to dispose of the dbcontext
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         // GET: Customers
         public ActionResult Index()
         {
-            return View();
+            var customers = _context.Customers;
+
+            return View(customers);
         }
 
         private IEnumerable<Customer> GetCustomers()
