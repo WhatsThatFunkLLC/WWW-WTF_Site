@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
+
 using WTF_Site.Models;
 using WTF_Site.Services;
 using WTF_Site.ViewModels;
@@ -24,7 +26,7 @@ namespace WTF_Site.Controllers
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             var comicsViewModel = new ComicsViewModel();
-            comicsViewModel.Comics = _comicService.InitializeComics();
+            comicsViewModel.Comics = _context.Comics;
 
             return View(comicsViewModel);
         }
@@ -37,7 +39,7 @@ namespace WTF_Site.Controllers
                 return HttpNotFound();
             }
 
-            var comic = _comicService.InitializeComics().Where(x => x.Id == id).FirstOrDefault();
+            var comic = _context.Comics.SingleOrDefault(x => x.Id == id);
            
             return View(comic);
            

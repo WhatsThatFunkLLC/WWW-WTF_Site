@@ -19,7 +19,7 @@
         <tr onclick="location.href = '@(Url.Action("Details", "Comics", new { id = @comic.Id }))'">
             <td>@comic.Title</td>
             <td>@comic.Id</td>
-            <td>@comic.Price</td>
+            <td>$@comic.Price</td>
             <td>@comic.Summary</td>
         </tr>
     }

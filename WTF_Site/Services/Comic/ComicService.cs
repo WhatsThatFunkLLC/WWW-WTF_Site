@@ -8,6 +8,7 @@ namespace WTF_Site.Services
 {
     public class ComicService : IComicService
     {
+
         public void FilterComics()
         {
             throw new NotImplementedException();
@@ -37,6 +38,11 @@ namespace WTF_Site.Services
         }
 
         public void SortComics()
+        {
+            throw new NotImplementedException();
+        }
+
+        List<Comic> IComicService.InitializeComics()
         {
             throw new NotImplementedException();
         }
