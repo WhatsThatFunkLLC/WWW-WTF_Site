@@ -31,7 +31,6 @@ namespace WTF_Site.Controllers
             return View(comicsViewModel);
         }
 
-        
         public ActionResult Details(int? id)
         {
             if(id == null || id < 1)
@@ -43,17 +42,6 @@ namespace WTF_Site.Controllers
            
             return View(comic);
            
-        }
-
-        public ActionResult Random()
-        {
-            var comic = new Comic() { Title = "Xybermporphs Volume 1" };
-            return View(comic);
-        }
-
-        public ActionResult Edit(int id)
-        {
-            return Content("id=" + id);
         }
 
         protected override void Dispose(bool disposing)

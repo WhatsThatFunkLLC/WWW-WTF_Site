@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WTF_Site.Models;
+using System.Data.Entity;
 
 namespace WTF_Site.Controllers
 {
@@ -25,14 +26,23 @@ namespace WTF_Site.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = _context.Customers;
+            var customers = _context.Customers.Include(x => x.MembershipType);
 
             return View(customers);
         }
 
-        private IEnumerable<Customer> GetCustomers()
+        public ActionResult Details(int? id)
         {
-            return new List<Customer>();
+            if(id == null || id < 1)
+            {
+                return HttpNotFound();
+            }
+
+            var customer = _context.Customers.Include(x => x.MembershipType).ToList().SingleOrDefault(x => x.Id == id);
+
+            return View(customer);
         }
+
+
     }
 }

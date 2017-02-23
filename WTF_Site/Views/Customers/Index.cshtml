@@ -1,8 +1,27 @@
 ﻿
-@model WTF_Site.Models.Customer
+@model IEnumerable<WTF_Site.Models.Customer>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+@Html.Partial("_NavBar")
+<h2>Customers</h2>
 
+<table id="customers" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Membership Type</th>
+        </tr>
+    </thead>
+
+    @foreach (WTF_Site.Models.Customer customer in Model)
+    {
+        <tr onclick="location.href = '@(Url.Action("Details", "Customers", new { id = @customer.Id }))'">
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.MembershipType.Name</td>
+        </tr>
+    }
+</table>

@@ -234,6 +234,34 @@
     <Compile Include="Migrations\201702182209099_PopulateComics.Designer.cs">
       <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702231858483_AddedMembershiptTypeName.cs" />
+    <Compile Include="Migrations\201702231858483_AddedMembershiptTypeName.Designer.cs">
+      <DependentUpon>201702231858483_AddedMembershiptTypeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702231901585_UpdateNameColumnInMebershipTypesTable.cs" />
+    <Compile Include="Migrations\201702231901585_UpdateNameColumnInMebershipTypesTable.Designer.cs">
+      <DependentUpon>201702231901585_UpdateNameColumnInMebershipTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702231906051_CorrectingMistypeInMembershipTypes.cs" />
+    <Compile Include="Migrations\201702231906051_CorrectingMistypeInMembershipTypes.Designer.cs">
+      <DependentUpon>201702231906051_CorrectingMistypeInMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232054279_AddedBirthdateToCustomerModel.cs" />
+    <Compile Include="Migrations\201702232054279_AddedBirthdateToCustomerModel.Designer.cs">
+      <DependentUpon>201702232054279_AddedBirthdateToCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232057180_CorrectedBirthdateColumn.cs" />
+    <Compile Include="Migrations\201702232057180_CorrectedBirthdateColumn.Designer.cs">
+      <DependentUpon>201702232057180_CorrectedBirthdateColumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232103455_CorrectedBirthdateAgain.cs" />
+    <Compile Include="Migrations\201702232103455_CorrectedBirthdateAgain.Designer.cs">
+      <DependentUpon>201702232103455_CorrectedBirthdateAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232106141_ReAddingBirthdateColumn.cs" />
+    <Compile Include="Migrations\201702232106141_ReAddingBirthdateColumn.Designer.cs">
+      <DependentUpon>201702232106141_ReAddingBirthdateColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
@@ -312,11 +340,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Comics\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Comics\Index.cshtml" />
     <Content Include="Views\Comics\Details.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -350,6 +378,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702182209099_PopulateComics.resx">
       <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702231858483_AddedMembershiptTypeName.resx">
+      <DependentUpon>201702231858483_AddedMembershiptTypeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702231901585_UpdateNameColumnInMebershipTypesTable.resx">
+      <DependentUpon>201702231901585_UpdateNameColumnInMebershipTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702231906051_CorrectingMistypeInMembershipTypes.resx">
+      <DependentUpon>201702231906051_CorrectingMistypeInMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232054279_AddedBirthdateToCustomerModel.resx">
+      <DependentUpon>201702232054279_AddedBirthdateToCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232057180_CorrectedBirthdateColumn.resx">
+      <DependentUpon>201702232057180_CorrectedBirthdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232103455_CorrectedBirthdateAgain.resx">
+      <DependentUpon>201702232103455_CorrectedBirthdateAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232106141_ReAddingBirthdateColumn.resx">
+      <DependentUpon>201702232106141_ReAddingBirthdateColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

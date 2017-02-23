@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -13,5 +14,7 @@ namespace WTF_Site.Models
         public bool IsSubscribedToEmail { get; set; }
         public MembershipType MembershipType { get; set; }
         public byte MembershipTypeId { get; set; }
+        [Column(TypeName = "Date")]
+        public DateTime? Birthdate { get; set; }
     }
 }

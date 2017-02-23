@@ -8,12 +8,15 @@
 <h2>Available Comics</h2>
 
 <table id="customers" class="table table-bordered table-hover">
-    <tr >
-        <th>Title</th>
-        <th>Issue #</th>
-        <th>Price</th>
-        <th>Summary</th>
-    </tr>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Issue #</th>
+            <th>Price</th>
+            <th>Summary</th>
+        </tr>
+    </thead>
+
     @foreach (WTF_Site.Models.Comic comic in Model.Comics)
     {
         <tr onclick="location.href = '@(Url.Action("Details", "Comics", new { id = @comic.Id }))'">

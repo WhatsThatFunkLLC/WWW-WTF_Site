@@ -1,0 +1,20 @@
+﻿@model WTF_Site.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+<ul>
+    <li>First Name: @Model.FirstName</li>
+    <li>Last Name: @Model.LastName</li>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    <li>Discount Rate: @Model.MembershipType.DiscountRate%</li>
+    <li>Subscribed to newsletter: @(Model.IsSubscribedToEmail ? "Yes" : "No")</li>
+
+    @if(Model.Birthdate != null)
+    {
+        <li>Birthday: @Model.Birthdate</li>
+    }
+</ul>
+
