@@ -1,4 +1,4 @@
-﻿@model WTF_Site.ViewModels.ComicsViewModel
+﻿@model IEnumerable<WTF_Site.Models.Comic>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,7 +17,7 @@
         </tr>
     </thead>
 
-    @foreach (WTF_Site.Models.Comic comic in Model.Comics)
+    @foreach (WTF_Site.Models.Comic comic in Model)
     {
         <tr onclick="location.href = '@(Url.Action("Details", "Comics", new { id = @comic.Id }))'">
             <td>@comic.Title</td>

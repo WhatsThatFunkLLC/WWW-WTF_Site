@@ -43,6 +43,10 @@ namespace WTF_Site.Controllers
             return View(customer);
         }
 
+        public ActionResult New()
+        {
+            return View();
+        }
 
     }
 }

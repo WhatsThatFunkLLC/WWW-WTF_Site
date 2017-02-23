@@ -6,8 +6,12 @@
 
 @Html.Partial("_NavBar");
 <h2>@Model.Title @Model.Id</h2>
-<img src="~/Content/Images/Xybermorphs_1.jpg"/>
+@*<img src="~/Content/Images/Xybermorphs_1.jpg"/>*@
 <ul>
-    <li>Price: @Model.Price</li>
+    <li>Genre: @Model.Genre.Name</li>
+    <li>Title: @Model.Title</li>
+    <li>Summary: @Model.Summary</li>
+    <li>Release Date: @Model.ReleaseDate</li>
+    <li>Price: $@Model.Price</li>
 </ul>
 

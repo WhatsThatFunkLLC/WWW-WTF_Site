@@ -262,10 +262,43 @@
     <Compile Include="Migrations\201702232106141_ReAddingBirthdateColumn.Designer.cs">
       <DependentUpon>201702232106141_ReAddingBirthdateColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702232122062_AddedGenreClassToComics.cs" />
+    <Compile Include="Migrations\201702232122062_AddedGenreClassToComics.Designer.cs">
+      <DependentUpon>201702232122062_AddedGenreClassToComics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232124478_AddedGenreIdClassToComics.cs" />
+    <Compile Include="Migrations\201702232124478_AddedGenreIdClassToComics.Designer.cs">
+      <DependentUpon>201702232124478_AddedGenreIdClassToComics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232131144_AddedGenreIdClassToComicsAgain.cs" />
+    <Compile Include="Migrations\201702232131144_AddedGenreIdClassToComicsAgain.Designer.cs">
+      <DependentUpon>201702232131144_AddedGenreIdClassToComicsAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232137161_AddReleaseDateToComics.cs" />
+    <Compile Include="Migrations\201702232137161_AddReleaseDateToComics.Designer.cs">
+      <DependentUpon>201702232137161_AddReleaseDateToComics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232139158_PopulateGenres.cs" />
+    <Compile Include="Migrations\201702232139158_PopulateGenres.Designer.cs">
+      <DependentUpon>201702232139158_PopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232150045_ReTryingPopulateGenres.cs" />
+    <Compile Include="Migrations\201702232150045_ReTryingPopulateGenres.Designer.cs">
+      <DependentUpon>201702232150045_ReTryingPopulateGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232154091_RemovingIdPropsInComics.cs" />
+    <Compile Include="Migrations\201702232154091_RemovingIdPropsInComics.Designer.cs">
+      <DependentUpon>201702232154091_RemovingIdPropsInComics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702232201468_PopulateGenresForRealzees.cs" />
+    <Compile Include="Migrations\201702232201468_PopulateGenresForRealzees.Designer.cs">
+      <DependentUpon>201702232201468_PopulateGenresForRealzees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -345,6 +378,7 @@
     <Content Include="Views\Comics\Index.cshtml" />
     <Content Include="Views\Comics\Details.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -399,6 +433,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702232106141_ReAddingBirthdateColumn.resx">
       <DependentUpon>201702232106141_ReAddingBirthdateColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232122062_AddedGenreClassToComics.resx">
+      <DependentUpon>201702232122062_AddedGenreClassToComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232124478_AddedGenreIdClassToComics.resx">
+      <DependentUpon>201702232124478_AddedGenreIdClassToComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232131144_AddedGenreIdClassToComicsAgain.resx">
+      <DependentUpon>201702232131144_AddedGenreIdClassToComicsAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232137161_AddReleaseDateToComics.resx">
+      <DependentUpon>201702232137161_AddReleaseDateToComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232139158_PopulateGenres.resx">
+      <DependentUpon>201702232139158_PopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232150045_ReTryingPopulateGenres.resx">
+      <DependentUpon>201702232150045_ReTryingPopulateGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232154091_RemovingIdPropsInComics.resx">
+      <DependentUpon>201702232154091_RemovingIdPropsInComics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232201468_PopulateGenresForRealzees.resx">
+      <DependentUpon>201702232201468_PopulateGenresForRealzees.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

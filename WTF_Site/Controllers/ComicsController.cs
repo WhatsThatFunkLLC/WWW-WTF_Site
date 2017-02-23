@@ -25,10 +25,9 @@ namespace WTF_Site.Controllers
         // GET: Comics
         public ActionResult Index(int? pageIndex, string sortBy)
         {
-            var comicsViewModel = new ComicsViewModel();
-            comicsViewModel.Comics = _context.Comics;
+            var comics = _context.Comics.Include(x => x.Genre);
 
-            return View(comicsViewModel);
+            return View(comics);
         }
 
         public ActionResult Details(int? id)
@@ -38,7 +37,7 @@ namespace WTF_Site.Controllers
                 return HttpNotFound();
             }
 
-            var comic = _context.Comics.SingleOrDefault(x => x.Id == id);
+            var comic = _context.Comics.Include(x => x.Genre).SingleOrDefault(x => x.Id == id);
            
             return View(comic);
            
