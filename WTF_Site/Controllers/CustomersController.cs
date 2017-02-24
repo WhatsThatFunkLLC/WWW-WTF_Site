@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using WTF_Site.Models;
 using System.Data.Entity;
+using WTF_Site.ViewModels;
 
 namespace WTF_Site.Controllers
 {
@@ -44,6 +45,18 @@ namespace WTF_Site.Controllers
         }
 
         public ActionResult New()
+        {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            var viewModel = new NewCustomerViewModel
+            {
+                MembershipTypes = membershipTypes
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Create(NewCustomerViewModel viewModel)
         {
             return View();
         }

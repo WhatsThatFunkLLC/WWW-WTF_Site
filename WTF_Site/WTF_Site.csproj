@@ -294,6 +294,18 @@
     <Compile Include="Migrations\201702232201468_PopulateGenresForRealzees.Designer.cs">
       <DependentUpon>201702232201468_PopulateGenresForRealzees.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702232250038_MadeFirstNameRequiredInCustomerModel.cs" />
+    <Compile Include="Migrations\201702232250038_MadeFirstNameRequiredInCustomerModel.Designer.cs">
+      <DependentUpon>201702232250038_MadeFirstNameRequiredInCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702240112363_AddedDisplayNameToBirthdateInCustomerModel.cs" />
+    <Compile Include="Migrations\201702240112363_AddedDisplayNameToBirthdateInCustomerModel.Designer.cs">
+      <DependentUpon>201702240112363_AddedDisplayNameToBirthdateInCustomerModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201702240325520_AddedDisplayNameToMembershipTypeId.cs" />
+    <Compile Include="Migrations\201702240325520_AddedDisplayNameToMembershipTypeId.Designer.cs">
+      <DependentUpon>201702240325520_AddedDisplayNameToMembershipTypeId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
@@ -307,6 +319,7 @@
     <Compile Include="Services\Comic\IComicService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\ComicsViewModel.cs" />
+    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-lumen.css" />
@@ -457,6 +470,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702232201468_PopulateGenresForRealzees.resx">
       <DependentUpon>201702232201468_PopulateGenresForRealzees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702232250038_MadeFirstNameRequiredInCustomerModel.resx">
+      <DependentUpon>201702232250038_MadeFirstNameRequiredInCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702240112363_AddedDisplayNameToBirthdateInCustomerModel.resx">
+      <DependentUpon>201702240112363_AddedDisplayNameToBirthdateInCustomerModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702240325520_AddedDisplayNameToMembershipTypeId.resx">
+      <DependentUpon>201702240325520_AddedDisplayNameToMembershipTypeId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

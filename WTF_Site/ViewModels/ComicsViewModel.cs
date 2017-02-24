@@ -9,6 +9,6 @@ namespace WTF_Site.ViewModels
 {
     public class ComicsViewModel
     {
-        public DbSet<Comic> Comics;
+        public IEnumerable<Comic> Comics;
     }
 }
