@@ -18,8 +18,8 @@
 
     @foreach (WTF_Site.Models.Customer customer in Model)
     {
-        <tr onclick="location.href = '@(Url.Action("Details", "Customers", new { id = @customer.Id }))'">
-            <td>@customer.FirstName</td>
+        <tr>
+            <td>@Html.ActionLink(customer.FirstName, "Edit", "Customers", new { id = customer.Id }, null)</td>
             <td>@customer.LastName</td>
             <td>@customer.MembershipType.Name</td>
         </tr>

@@ -6,7 +6,7 @@ using WTF_Site.Models;
 
 namespace WTF_Site.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerFormViewModel
     {
         public IEnumerable<MembershipType> MembershipTypes { get; set; }
         public Customer Customer { get; set; }
