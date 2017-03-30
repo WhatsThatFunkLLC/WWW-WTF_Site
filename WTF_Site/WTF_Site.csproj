@@ -230,10 +230,6 @@
     <Compile Include="Migrations\201702180314560_UpdatingDbAfterSourceUpdate.Designer.cs">
       <DependentUpon>201702180314560_UpdatingDbAfterSourceUpdate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201702182209099_PopulateComics.cs" />
-    <Compile Include="Migrations\201702182209099_PopulateComics.Designer.cs">
-      <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201702231858483_AddedMembershiptTypeName.cs" />
     <Compile Include="Migrations\201702231858483_AddedMembershiptTypeName.Designer.cs">
       <DependentUpon>201702231858483_AddedMembershiptTypeName.cs</DependentUpon>
@@ -306,6 +302,10 @@
     <Compile Include="Migrations\201702240325520_AddedDisplayNameToMembershipTypeId.Designer.cs">
       <DependentUpon>201702240325520_AddedDisplayNameToMembershipTypeId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703300145048_MadeGenreIdRequired.cs" />
+    <Compile Include="Migrations\201703300145048_MadeGenreIdRequired.Designer.cs">
+      <DependentUpon>201703300145048_MadeGenreIdRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
@@ -318,6 +318,7 @@
     <Compile Include="Services\Comic\ComicService.cs" />
     <Compile Include="Services\Comic\IComicService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ComicFormViewModel.cs" />
     <Compile Include="ViewModels\ComicsViewModel.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
   </ItemGroup>
@@ -393,6 +394,7 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\CustomerForm.cshtml" />
     <Content Include="Views\Shared\_ImageSlider.cshtml" />
+    <Content Include="Views\Comics\ComicForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -423,9 +425,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702180314560_UpdatingDbAfterSourceUpdate.resx">
       <DependentUpon>201702180314560_UpdatingDbAfterSourceUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201702182209099_PopulateComics.resx">
-      <DependentUpon>201702182209099_PopulateComics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702231858483_AddedMembershiptTypeName.resx">
       <DependentUpon>201702231858483_AddedMembershiptTypeName.cs</DependentUpon>
@@ -480,6 +479,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702240325520_AddedDisplayNameToMembershipTypeId.resx">
       <DependentUpon>201702240325520_AddedDisplayNameToMembershipTypeId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703300145048_MadeGenreIdRequired.resx">
+      <DependentUpon>201703300145048_MadeGenreIdRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

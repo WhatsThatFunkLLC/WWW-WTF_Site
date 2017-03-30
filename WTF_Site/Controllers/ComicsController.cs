@@ -43,6 +43,59 @@ namespace WTF_Site.Controllers
            
         }
 
+        public ActionResult New()
+        {
+            var membershipTypes = _context.Genre;
+            var viewModel = new ComicFormViewModel
+            {
+                Genres = membershipTypes
+            };
+
+            return View("ComicForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Comic comic)
+        {
+            if (comic.Id == 0)
+            {
+                _context.Comics.Add(comic);
+            }
+            else
+            {
+                var comicInDb = _context.Comics.Single(c => c.Id == comic.Id);
+
+                comicInDb.Title = comic.Title;
+                comicInDb.Price = comic.Price;
+                comicInDb.ReleaseDate = comic.ReleaseDate;
+                comicInDb.GenreId = comic.GenreId;
+                comicInDb.Summary = comic.Summary;
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Comics");
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
+            if (customer == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new CustomerFormViewModel()
+            {
+                Customer = customer,
+                MembershipTypes = _context.MembershipTypes.ToList()
+            };
+
+            return View("CustomerForm", viewModel);
+        }
+
+
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
