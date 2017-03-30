@@ -57,6 +57,16 @@ namespace WTF_Site.Controllers
         [HttpPost]
         public ActionResult Save(Comic comic)
         {
+            if(!ModelState.IsValid)
+            {
+                var viewModel = new ComicFormViewModel
+                {
+                    Comic = comic,
+                    Genres = _context.Genre.ToList()
+                };
+                return View("ComicForm", viewModel);
+            }
+
             if (comic.Id == 0)
             {
                 _context.Comics.Add(comic);

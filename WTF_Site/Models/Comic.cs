@@ -11,6 +11,7 @@ namespace WTF_Site.Models
     public class Comic
     {
         public int Id { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Summary { get; set; }
         public double Price { get; set; }
