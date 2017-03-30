@@ -56,6 +56,7 @@ namespace WTF_Site.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Comic comic)
         {
             if(!ModelState.IsValid)
