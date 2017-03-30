@@ -49,6 +49,7 @@ namespace WTF_Site.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             var viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
 
@@ -58,7 +59,19 @@ namespace WTF_Site.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)
         {
-            if(customer.Id == 0)
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
+
+                var viewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("ComicForm", viewModel);
+            }
+
+            if (customer.Id == 0)
             {
                 _context.Customers.Add(customer);
             }

@@ -48,6 +48,7 @@ namespace WTF_Site.Controllers
             var membershipTypes = _context.Genre;
             var viewModel = new ComicFormViewModel
             {
+                Comic = new Comic(),
                 Genres = membershipTypes
             };
 
@@ -59,6 +60,7 @@ namespace WTF_Site.Controllers
         {
             if(!ModelState.IsValid)
             {
+                var errors = ModelState.Values.SelectMany(v => v.Errors);
                 var viewModel = new ComicFormViewModel
                 {
                     Comic = comic,
