@@ -17,6 +17,7 @@ namespace WTF_Site.Models
         public double Price { get; set; }
         public Genre Genre { get; set; }
         [Required]
+        [Display(Name = "Genre")]
         public byte GenreId { get; set; }
         public DateTime? ReleaseDate { get; set; }
         //public Image Preview { get; set; }
