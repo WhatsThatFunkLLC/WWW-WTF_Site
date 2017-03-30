@@ -310,6 +310,10 @@
     <Compile Include="Migrations\201703300215261_MadeTitleRequired.Designer.cs">
       <DependentUpon>201703300215261_MadeTitleRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703300233454_MadeGenreIdDisplayAsGenre.cs" />
+    <Compile Include="Migrations\201703300233454_MadeGenreIdDisplayAsGenre.Designer.cs">
+      <DependentUpon>201703300233454_MadeGenreIdDisplayAsGenre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Comic.cs" />
@@ -489,6 +493,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703300215261_MadeTitleRequired.resx">
       <DependentUpon>201703300215261_MadeTitleRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703300233454_MadeGenreIdDisplayAsGenre.resx">
+      <DependentUpon>201703300233454_MadeGenreIdDisplayAsGenre.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
